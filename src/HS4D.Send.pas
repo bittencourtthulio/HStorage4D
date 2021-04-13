@@ -116,7 +116,7 @@ begin
     .Post;
 
   if LResponse.StatusCode = 201 then
-     FContent:= LResponse.Content;
+     FContent:= FParent.Credential.BaseURL + LResponse.Content;
 end;
 
 function THS4DSend.ToString: string;
